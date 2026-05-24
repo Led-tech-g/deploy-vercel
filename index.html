@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ano Tara?</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap)" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a href="about.html" class="logo" title="Click logo → About">
+        <img src="logo.png.png" alt="Ano Tara? logo" class="logo-img" />
+      </a>
+
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="explore.html" class="nav-link">Explore</a>
+        <a href="bookmarks.html" class="nav-link">Bookmarks</a>
+      </nav>
+
+      <a href="about.html" class="nav-link about-link">About</a>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div class="search-wrap">
+          <span class="search-icon">⌕</span>
+          <input type="text" placeholder="Search cafés, places, vibes…" class="search" />
+        </div>
+        <div class="auth" id="authArea">
+          <button class="btn btn-ghost" id="loginBtn">Log in</button>
+          <button class="btn btn-solid" id="joinBtn">Join</button>
+        </div>
+      </header>
+
+      <section class="greeting">
+        <p class="hello" id="helloLine" style="display:none;">Kumusta, <span id="helloName">friend</span> ✦</p>
+        <h1 class="hero-title">Saan tayo? <em>Ano tara?</em></h1>
+      </section>
+
+      <section class="stats">
+        <div class="stat-card">
+          <p class="stat-label">Places Visited</p>
+          <p class="stat-num">48</p>
+          <p class="stat-foot">+3 this month</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Bookmarked</p>
+          <p class="stat-num">12</p>
+          <p class="stat-foot">waiting for you</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Reviews Written</p>
+          <p class="stat-num">21</p>
+          <p class="stat-foot">avg ★ 4.6</p>
+        </div>
+        <div class="stat-card accent-card">
+          <p class="stat-label">Streak</p>
+          <p class="stat-num">7<span class="unit">wks</span></p>
+          <p class="stat-foot">café-hopping</p>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="block-head">
+          <h2>Your Top Three Picks</h2>
+          <p class="muted">based on your recent vibes</p>
+        </div>
+        <div class="picks-row">
+          <article class="pick-card hover-float" data-cafe="momento">
+            <img src="momento.png" alt="Momento Coffee Bar" class="pick-img" />
+            <h3>Momento Coffee Bar</h3>
+            <p class="muted">Las Piñas City</p>
+          </article>
+          <article class="pick-card hover-float" data-cafe="study-hall">
+            <img src="studyhall.png" alt="Study Hall España" class="pick-img" />
+            <h3>Study Hall España</h3>
+            <p class="muted">P. Campa, Manila</p>
+          </article>
+          <article class="pick-card hover-float" data-cafe="eutopia">
+            <img src="eutopia.png" alt="Eutopia Cafe" class="pick-img" />
+            <h3>Eutopia Cafe</h3>
+            <p class="muted">España, Manila</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="block-head">
+          <h2>Recently Reviewed</h2>
+          <p class="muted">your latest takes</p>
+        </div>
+        <div class="recent-list">
+          <div class="recent-row">
+            <img src="dev.png" alt="De Venezia Café" class="recent-thumb" />
+            <div class="recent-body">
+              <h4>De Venezia Café</h4>
+              <p class="muted">Las Piñas · pasta heaven</p>
+            </div>
+            <div class="recent-stars">★★★★★</div>
+          </div>
+          <div class="recent-row">
+            <img src="oolah.png" alt="Oolah Coffee" class="recent-thumb" />
+            <div class="recent-body">
+              <h4>Oolah Coffee</h4>
+              <p class="muted">Makati · matcha banana pudding</p>
+            </div>
+            <div class="recent-stars">★★★★☆</div>
+          </div>
+          <div class="recent-row">
+            <img src="calle.png" alt="Calle Cafe by Don Gabriel" class="recent-thumb" />
+            <div class="recent-body">
+              <h4>Calle Cafe by Don Gabriel</h4>
+              <p class="muted">España · ambiance for days</p>
+            </div>
+            <div class="recent-stars">★★★★★</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="block-head">
+          <h2>Recommended for You</h2>
+          <p class="muted">because you liked Eutopia & Calle Cafe</p>
+        </div>
+        <div class="reco-grid">
+          <div class="reco-card hover-float" data-cafe="lola">
+            <img src="lola.png" alt="A Cup for Lola" class="reco-img" />
+            <h4>A Cup for Lola</h4>
+            <p class="muted">Makati · cozy ambiance</p>
+          </div>
+          <div class="reco-card hover-float" data-cafe="kapean">
+            <img src="kapean.png" alt="Kap'ean Coffee PH" class="reco-img" />
+            <h4>Kap'ean Coffee PH</h4>
+            <p class="muted">Cavite · garden views</p>
+          </div>
+          <div class="reco-card hover-float" data-cafe="bungad">
+            <img src="bungad.png" alt="Bungad Cafe" class="reco-img" />
+            <h4>Bungad Cafe</h4>
+            <p class="muted">Tagaytay · hidden gem</p>
+          </div>
+          <div class="reco-card hover-float" data-cafe="heavenly">
+            <img src="heavenly.png" alt="Heavenly Desserts" class="reco-img" />
+            <h4>Heavenly Desserts</h4>
+            <p class="muted">BGC · best cakes</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="foot">
+        <p>Ano Tara? © 2026</p>
+      </footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="authModal">
+    <div class="modal auth-modal">
+      <button class="modal-close" id="authClose">×</button>
+      <div class="auth-inner">
+        <h2 id="authTitle">Log in</h2>
+        <p class="muted" id="authSub">welcome back ✦</p>
+        <input type="text" id="authName" placeholder="First name" />
+        <input type="email" id="authEmail" placeholder="Email" />
+        <input type="password" id="authPass" placeholder="Password" />
+        <button class="btn btn-solid btn-full" id="authSubmit">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-inner">
+        <img src="" alt="" class="modal-photo" id="modalPhoto" />
+        <div class="modal-body">
+          <h2 id="modalTitle">Cafe Name</h2>
+          <p class="muted" id="modalLocation">Location</p>
+          <p id="modalDesc" class="modal-desc">Description goes here.</p>
+          <div class="must-try">
+            <span class="tag">Must try:</span>
+            <span id="modalMustTry">Bestseller</span>
+          </div>
+
+          <div class="rate-row">
+            <p>Your rating:</p>
+            <div class="stars" id="starRate">
+              <span data-v="1">☆</span><span data-v="2">☆</span><span data-v="3">☆</span><span data-v="4">☆</span><span data-v="5">☆</span>
+            </div>
+            <button class="like-btn" id="likeBtn">♡ <span id="likeCount">128</span></button>
+            <button class="bookmark-btn" id="bookmarkBtn">⛉ Bookmark</button>
+          </div>
+
+          <div class="comments">
+            <h3>Comments</h3>
+            <div class="comment-list" id="commentList"></div>
+            <div class="comment-form">
+              <input type="text" id="commentInput" placeholder="Share your thoughts…" />
+              <button id="commentBtn" class="btn btn-solid">Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

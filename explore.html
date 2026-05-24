@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ano Tara?</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap)" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a href="about.html" class="logo" title="Click logo → About">
+        <img src="logo.png.png" alt="Ano Tara? logo" class="logo-img" />
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="explore.html" class="nav-link active">Explore</a>
+        <a href="bookmarks.html" class="nav-link">Bookmarks</a>
+      </nav>
+      <a href="about.html" class="nav-link about-link">About</a>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="search-wrap">
+          <span class="search-icon">⌕</span>
+          <input type="text" placeholder="Search cafés…" class="search" id="exploreSearch" />
+        </div>
+        <div class="auth" id="authArea">
+          <button class="btn btn-ghost" id="loginBtn">Log in</button>
+          <button class="btn btn-solid" id="joinBtn">Join</button>
+        </div>
+      </header>
+
+      <section class="greeting">
+        <h1 class="hero-title">Explore</h1>
+      </section>
+
+      <section class="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="metro-manila">Metro Manila</button>
+        <button class="chip" data-filter="cavite">Cavite</button>
+        <button class="chip" data-filter="tagaytay">Tagaytay</button>
+        <button class="chip" data-filter="rizal">Rizal</button>
+        <button class="chip" data-filter="espana">España</button>
+        <button class="chip" data-filter="leds">★ Led's Picks</button>
+      </section>
+
+      <section class="block" id="ledsSection">
+        <div class="block-head">
+          <h2>Led's Recommendation of the Month</h2>
+        </div>
+        <div class="leds-row">
+          <article class="leds-card hover-float" data-cafe="de-venezia">
+            <img src="dev.png" alt="De Venezia Café" class="leds-img" />
+            <span class="badge">Las Piñas City</span>
+            <h3>De Venezia Café</h3>
+            <p class="muted">Best Pasta</p>
+          </article>
+          <article class="leds-card hover-float" data-cafe="cafe-singko">
+            <img src="singko.png" alt="Cafe Singko" class="leds-img" />
+            <span class="badge">Las Piñas City</span>
+            <h3>Cafe Singko</h3>
+            <p class="muted">Best Strawberry Hat Pastry</p>
+          </article>
+          <article class="leds-card hover-float" data-cafe="gimik">
+            <img src="gimik.png" alt="Gimik Cafe" class="leds-img" />
+            <span class="badge">Las Piñas City</span>
+            <h3>Gimik Cafe</h3>
+            <p class="muted">90's-themed nostalgia</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="block category-block" data-cat="hot">
+        <div class="block-head">
+          <h2>Hot Right Now</h2>
+          <p class="muted">trending across the metro</p>
+        </div>
+        <div class="hot-grid" id="hotGrid"></div>
+      </section>
+
+      <section class="block category-block" data-cat="cozy">
+        <div class="block-head">
+          <h2>Cozy & Warm Vibes</h2>
+          <p class="muted">for slow afternoons & long talks</p>
+        </div>
+        <div class="hot-grid" id="cozyGrid"></div>
+      </section>
+
+      <section class="block category-block" data-cat="study">
+        <div class="block-head">
+          <h2>Study & Work-Friendly</h2>
+          <p class="muted">outlets, wifi, no judgment</p>
+        </div>
+        <div class="hot-grid" id="studyGrid"></div>
+      </section>
+
+      <section class="block category-block" data-cat="scenic">
+        <div class="block-head">
+          <h2>Scenic & Out-of-Town</h2>
+          <p class="muted">views worth the commute</p>
+        </div>
+        <div class="hot-grid" id="scenicGrid"></div>
+      </section>
+
+      <section class="block category-block" data-cat="dessert">
+        <div class="block-head">
+          <h2>Dessert Heaven</h2>
+          <p class="muted">cakes, pastries, sweet things</p>
+        </div>
+        <div class="hot-grid" id="dessertGrid"></div>
+      </section>
+
+      <section class="block" id="filteredBlock" style="display:none;">
+        <div class="block-head">
+          <h2 id="filteredTitle">Results</h2>
+        </div>
+        <div class="hot-grid" id="filteredGrid"></div>
+      </section>
+
+      <footer class="foot">
+        <p>Ano Tara? © 2026</p>
+      </footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="authModal">
+    <div class="modal auth-modal">
+      <button class="modal-close" id="authClose">×</button>
+      <div class="auth-inner">
+        <h2 id="authTitle">Log in</h2>
+        <p class="muted" id="authSub">welcome back ✦</p>
+        <input type="text" id="authName" placeholder="First name" />
+        <input type="email" id="authEmail" placeholder="Email" />
+        <input type="password" id="authPass" placeholder="Password" />
+        <button class="btn btn-solid btn-full" id="authSubmit">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-inner">
+        <img src="" alt="" class="modal-photo" id="modalPhoto" />
+        <div class="modal-body">
+          <h2 id="modalTitle">Cafe Name</h2>
+          <p class="muted" id="modalLocation">Location</p>
+          <p id="modalDesc" class="modal-desc"></p>
+          <div class="must-try">
+            <span class="tag">Must try:</span>
+            <span id="modalMustTry"></span>
+          </div>
+          <div class="rate-row">
+            <p>Your rating:</p>
+            <div class="stars" id="starRate">
+              <span data-v="1">☆</span><span data-v="2">☆</span><span data-v="3">☆</span><span data-v="4">☆</span><span data-v="5">☆</span>
+            </div>
+            <button class="like-btn" id="likeBtn">♡ <span id="likeCount">0</span></button>
+            <button class="bookmark-btn" id="bookmarkBtn">⛉ Bookmark</button>
+          </div>
+          <div class="comments">
+            <h3>Comments</h3>
+            <div class="comment-list" id="commentList"></div>
+            <div class="comment-form">
+              <input type="text" id="commentInput" placeholder="Share your thoughts…" />
+              <button id="commentBtn" class="btn btn-solid">Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

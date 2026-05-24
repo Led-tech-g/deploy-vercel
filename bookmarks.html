@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ano Tara?</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap)" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a href="about.html" class="logo">
+        <img src="logo.png.png" alt="Ano Tara? logo" class="logo-img" />
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="explore.html" class="nav-link">Explore</a>
+        <a href="bookmarks.html" class="nav-link active">Bookmarks</a>
+      </nav>
+      <a href="about.html" class="nav-link about-link">About</a>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="search-wrap">
+          <span class="search-icon">⌕</span>
+          <input type="text" placeholder="Search bookmarks…" class="search" />
+        </div>
+        <div class="auth" id="authArea">
+          <button class="btn btn-ghost" id="loginBtn">Log in</button>
+          <button class="btn btn-solid" id="joinBtn">Join</button>
+        </div>
+      </header>
+
+      <section class="greeting">
+        <h1 class="hero-title">Bookmarks</h1>
+      </section>
+
+      <section class="block">
+        <div class="hot-grid" id="bookmarkGrid"></div>
+        <p id="emptyMsg" class="muted" style="text-align:center; margin-top:40px; display:none; font-size:16px;">
+          no bookmarks yet hihi ✦
+        </p>
+      </section>
+
+      <footer class="foot">
+        <p>Ano Tara? © 2026</p>
+      </footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="authModal">
+    <div class="modal auth-modal">
+      <button class="modal-close" id="authClose">×</button>
+      <div class="auth-inner">
+        <h2 id="authTitle">Log in</h2>
+        <p class="muted" id="authSub">welcome back ✦</p>
+        <input type="text" id="authName" placeholder="First name" />
+        <input type="email" id="authEmail" placeholder="Email" />
+        <input type="password" id="authPass" placeholder="Password" />
+        <button class="btn btn-solid btn-full" id="authSubmit">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-inner">
+        <img src="" alt="" class="modal-photo" id="modalPhoto" />
+        <div class="modal-body">
+          <h2 id="modalTitle"></h2>
+          <p class="muted" id="modalLocation"></p>
+          <p id="modalDesc" class="modal-desc"></p>
+          <div class="must-try"><span class="tag">Must try:</span> <span id="modalMustTry"></span></div>
+          <div class="rate-row">
+            <p>Your rating:</p>
+            <div class="stars" id="starRate">
+              <span data-v="1">☆</span><span data-v="2">☆</span><span data-v="3">☆</span><span data-v="4">☆</span><span data-v="5">☆</span>
+            </div>
+            <button class="like-btn" id="likeBtn">♡ <span id="likeCount">0</span></button>
+            <button class="bookmark-btn" id="bookmarkBtn">⛉ Bookmark</button>
+          </div>
+          <div class="comments">
+            <h3>Comments</h3>
+            <div class="comment-list" id="commentList"></div>
+            <div class="comment-form">
+              <input type="text" id="commentInput" placeholder="Share your thoughts…" />
+              <button id="commentBtn" class="btn btn-solid">Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

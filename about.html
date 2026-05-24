@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ano Tara?</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap)" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a href="about.html" class="logo">
+        <img src="logo.png.png" alt="Ano Tara? logo" class="logo-img" />
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="explore.html" class="nav-link">Explore</a>
+        <a href="bookmarks.html" class="nav-link">Bookmarks</a>
+      </nav>
+      <a href="about.html" class="nav-link about-link active">About</a>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="search-wrap">
+          <span class="search-icon">⌕</span>
+          <input type="text" placeholder="Search…" class="search" />
+        </div>
+        <div class="auth" id="authArea">
+          <button class="btn btn-ghost" id="loginBtn">Log in</button>
+          <button class="btn btn-solid" id="joinBtn">Join</button>
+        </div>
+      </header>
+
+      <section class="about-hero">
+        <div class="about-photo">
+          <!-- Replace led.png with your photo -->
+          <img src="led.jpg" alt="Led Macalinga" class="about-img" />
+        </div>
+        <div class="about-text">
+          <p class="muted">hi hello, kumusta!</p>
+          <h1>I'm Led Paulus Macalinga.</h1>
+          <p>
+            I'm a 2nd Year BSIT student specializing in Mobile & Web Applications.
+            One of the reasons <em>Ano Tara?</em> exists is because cafés feel like art to me
+            the lighting, the cup ceramics, the way a barista pulls a shot, the playlist
+            spilling from a corner speaker. Every café is a tiny museum, and I wanted a
+            place online where students like me can find them without endlessly scrolling.
+          </p>
+          <p>
+            I built this for the gen z café-hoppers, the after-class ayaan, and anyone
+            who's ever asked their seb the question:
+            <strong>"Ano, tara?"</strong>
+          </p>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="block-head">
+          <h2>The one who got me into this</h2>
+          <p class="muted">my partner, the main reason I fell in love with café hopping</p>
+        </div>
+        <div class="story-grid">
+          <div class="story-card">
+            <img src="solo.jpg" alt="Cafe hop 1" class="story-img" />
+          </div>
+          <div class="story-card">
+            <img src="together.jpg" alt="Cafe hop 2" class="story-img" />
+          </div>
+          <div class="story-card">
+            <img src="dinner.jpg" alt="Cafe hop 3" class="story-img" />
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto">
+        <h2>Our story</h2>
+        <p>
+          <em>Ano Tara?</em> started as a list in my Notes app. After every café we tried,
+          I'd jot down the address, the bestseller, and a one-line vibe check. Eventually
+          friends started DM-ing me asking <em>"saan ulit yung cafe na sinabi mo?"</em> —
+          and I figured: why not put it all in one website?
+        </p>
+        <p>
+          So this is it. A love letter to third places.
+          New cafés get added monthly. Reviews are real. Recommendations are mine.
+          And the door is always open. Ano Tara?
+        </p>
+      </section>
+
+      <footer class="foot">
+        <p>Ano Tara? © 2026</p>
+      </footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="authModal">
+    <div class="modal auth-modal">
+      <button class="modal-close" id="authClose">×</button>
+      <div class="auth-inner">
+        <h2 id="authTitle">Log in</h2>
+        <p class="muted" id="authSub">welcome back ✦</p>
+        <input type="text" id="authName" placeholder="First name" />
+        <input type="email" id="authEmail" placeholder="Email" />
+        <input type="password" id="authPass" placeholder="Password" />
+        <button class="btn btn-solid btn-full" id="authSubmit">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
